@@ -1,7 +1,7 @@
 
-async function fetchData() {
+async function fetchData(id) {
   try {
-    const response = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+    const response = await fetch(`https://jsonplaceholder.typicode.com/todos/${id}`);
     const data = await response.json();
     return data;
   }
